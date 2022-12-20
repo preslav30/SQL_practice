@@ -20,4 +20,5 @@ SELECT concat(emp.first_name, ' ', emp.last_name) AS "Name", dep.dept_name, dep_
 FROM public.departments AS "dep"
 INNER JOIN public.dept_emp AS "dep_emp" USING(dept_no)
 INNER JOIN public.employees AS "emp"  USING(emp_no)
-WHERE dep.dept_no = 'd005'  
+WHERE dep.dept_no = 'd005'
+ 
