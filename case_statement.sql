@@ -5,4 +5,10 @@
 * if it's between 10 and 20 you show 'average' 
 * and of is lower than or equal to 10 you show 'cheap'.
 */
-SELECT * FROM 
+SELECT *,
+    CASE 
+        WHEN price > 20 THEN 'expensive'
+        WHEN price BETWEEN 10 AND 20 THEN 'average'
+        ELSE 'cheap'
+    END AS "price class"
+FROM public.products
